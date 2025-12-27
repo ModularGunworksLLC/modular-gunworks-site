@@ -57,13 +57,13 @@ def create_placeholder(text, path):
 # Generate category images
 for cat in categories:
     slug = cat.lower().replace(" ", "-")
-    path = f"images/categories/{slug}.png"
+    path = f"images/categories/{slug}.jpg"
     create_placeholder(cat, path)
 
 # Generate brand images
 for brand in brands:
     slug = brand.lower().replace(" ", "-").replace("&", "and")
-    path = f"images/brands/{slug}.png"
+    path = f"images/brands/{slug}.jpg"
     create_placeholder(brand, path)
 
 print("\nPlaceholder images created successfully.")
