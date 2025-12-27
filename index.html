@@ -163,6 +163,52 @@
       <p><a href="mailto:support@modulargunworks.com">support@modulargunworks.com</a></p>
     </div>
   </footer>
+<div id="age-verification" class="popup">
+  <div class="popup-content">
+    <h2>Are you at least 18 years old?</h2>
+    <p>By entering this site, you agree to our 
+      <a href="privacy.html">Privacy Policy</a> and 
+      <a href="terms.html">Terms & Conditions</a>.
+    </p>
+
+    <label class="remember">
+      <input type="checkbox" id="remember-me">
+      Remember me temporarily while I shop
+    </label>
+
+    <div class="popup-buttons">
+      <button id="yes-button">YES</button>
+      <button id="no-button">NO</button>
+    </div>
+  </div>
+</div>
+<script>
+  const popup = document.getElementById('age-verification');
+  const yesBtn = document.getElementById('yes-button');
+  const noBtn = document.getElementById('no-button');
+  const rememberMe = document.getElementById('remember-me');
+
+  // Check if user has previously confirmed
+  const confirmed = localStorage.getItem('ageConfirmed');
+
+  // Always show popup on first visit
+  if (!confirmed) {
+    popup.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling behind popup
+  }
+
+  yesBtn.onclick = () => {
+    if (rememberMe.checked) {
+      localStorage.setItem('ageConfirmed', 'true');
+    }
+    popup.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  };
+
+  noBtn.onclick = () => {
+    window.location.href = 'https://www.google.com';
+  };
+</script>
 
 </body>
 </html>

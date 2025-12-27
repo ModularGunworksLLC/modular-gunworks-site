@@ -135,3 +135,50 @@ body {
   margin-top: 20px;
   color: #777;
 }
+/* AGE VERIFICATION POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none; /* Hidden until JS shows it */
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.popup-content {
+  background: #222;
+  color: #ddd;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px #000;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.popup-buttons button {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-buttons button:hover {
+  background: #666;
+}
+
+.remember {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
