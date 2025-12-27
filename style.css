@@ -73,33 +73,33 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: 10px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-/* Image container gets a fixed portion of the tile */
 .image-box {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* square */
-  padding: 10px;
-  box-sizing: border-box;
-  flex-shrink: 0;        /* prevents it from crushing the label */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
-/* Image fills the padded square */
 .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
   display: block;
+  border-radius: 6px;
 }
 
-/* Label stays visible */
 .tile span {
   font-size: 1.1rem;
   font-weight: bold;
-  flex-shrink: 0;        /* prevents label from collapsing */
+  margin-top: auto;
 }
+
 
 .tile:hover {
   background: #333;
