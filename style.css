@@ -152,7 +152,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+.popup-logo {
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+}
 .popup-content {
   background: #222;
   color: #ddd;
